@@ -43,6 +43,12 @@
      </aside>
 
     <header class="bg-slate-50 text-slate-900 top-0 z-10 ml-0 md:ml-36 mr-0 md:mr-36">
+        <div class="p-6">
+            <button id="hamburger-button" class="text-3xl md:hidden relative w-8 h-8">
+                <!-- &#9776; -->
+                <div class="bg-slate-900 w-8 h-1 rounded absolute top-4 -mt-0.5 transition-all duration-500 before:content-[''] before:bg-slate-900 before:w-8 before:h-1 before:rounded before:absolute before:-translate-x-4 before:-translate-y-3 before:transition-all before:duration-500 after:content-[''] after:bg-slate-900 after:w-8 after:h-1 after:rounded after:absolute after:-translate-x-4 after:translate-y-3 after:transition-all after:duration-500"></div>
+            </button>
+        </div>
         <section class="max-w-4xl mx-auto p-4 flex flex-row justify-between">
             <div>
                 <h1 class="text-5xl sm:text-4xl font-kalam font-bold text-left mb-1 mt-2 md:mt-16 text-slate-900">
@@ -50,12 +56,18 @@
                 </h1>
                 <p class="text-xl sm:text-lg font-kalam font-bold text-left mb-1 text-slate-600">SENTENCE ABOUT YOUR WORK</p>
             </div>
-            <div class="my-1">
-                <button id="mobile-open-button" class="text-3xl md:hidden focus:outline-none">
-                    &#9776;
-                </button>
-            </div>
         </section>
+        <section id="mobile-menu" class="absolute z-50 top-14 bg-slate-50 text-slate-900 w-full text-5xl flex-col justify-content-center origin-top animate-open-menu hidden">
+            <!-- <button class="text-8xl self-end px-6">
+                    &times;
+                </button> -->
+            <nav class="flex flex-col min-h-screen items-center py-8 font-kalam font-bold" aria-label="mobile">
+                <a href="../index.html" class="w-full text-center py-6 hover:opacity-90">HOME</a>
+                <a href="#" class="w-full text-center py-6 hover:opacity-90">WORK</a>
+                <a href="about.html" class="w-full text-center py-6 hover:opacity-90">ABOUT</a>
+                <a href="contact.html" class="w-full text-center py-6 hover:opacity-90">CONTACT</a>
+            </nav>
+      </section>
     </header>
 
     <main class="ml-0 md:ml-36 mr-0 md:mr-36">
