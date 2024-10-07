@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
-    <script src="../js/main.js"></script>
+    <script src="../js/main.js" defer></script>
 </head>
 <body class="min-h-screen bg-slate-50">
     <aside id="default-sidebar" class="fixed top-0 left-0 z-40 w-36 h-screen transition-transform -translate-x-full md:translate-x-0 flex items-center flex-col justify-center" aria-label="Sidebar">
@@ -42,7 +42,7 @@
         </div>
      </aside>
 
-    <header class="bg-slate-50 text-slate-900 top-0 z-10 ml-0 md:ml-36 mr-0 md:mr-36">
+     <header id="header" class="bg-slate-50 text-slate-900 top-0 z-10 ml-0 md:ml-36 mr-0 md:mr-36">
         <div class="p-6">
             <button id="hamburger-button" class="text-3xl md:hidden relative w-8 h-8">
                 <!-- &#9776; -->
@@ -51,7 +51,7 @@
         </div>
         <section class="max-w-4xl mx-auto p-4 flex flex-row justify-between">
             <div>
-                <h1 class="text-5xl sm:text-4xl font-kalam font-bold text-left mb-1 mt-2 md:mt-16 text-slate-900">
+                <h1 class="text-5xl sm:text-4xl font-kalam font-bold text-left mb-1 mt-0 md:mt-16 text-slate-900">
                     <a href="#">HI, I'M MADDIE!</a>
                 </h1>
                 <p class="text-xl sm:text-lg font-kalam font-bold text-left mb-1 text-slate-600">SENTENCE ABOUT YOURSELF</p>
@@ -67,7 +67,7 @@
                 <a href="#" class="w-full text-center py-6 hover:opacity-90">ABOUT</a>
                 <a href="contact.html" class="w-full text-center py-6 hover:opacity-90">CONTACT</a>
             </nav>
-      </section>
+        </section>
     </header>
 
     <main class="ml-0 md:ml-36 mr-0 md:mr-36">
@@ -140,11 +140,11 @@
 
     <footer id="footer" class="text-slate-600 text-base ml-0 md:ml-36 mt-2 sm:mt-8 mr-0 md:mr-36">
         <section class="max-w-4xl mx-auto p-4 flex flex-col sm:flex-row sm:justify-between">
-          <div class="flex flex-col text-center sm:text-left font-kalam">
-            <p class="">COPYRIGHT &copy; MADDIE BOWMAN <span id="year">2024</span></p>
-            <p class="">ALL RIGHTS RESERVED</p>
-          </div>
+            <div class="flex flex-col text-center sm:text-left font-kalam">
+                <p class="">COPYRIGHT &copy; MADDIE BOWMAN <span id="year">2024</span></p>
+                <p class="">ALL RIGHTS RESERVED</p>
+            </div>
         </section>
-      </footer>
+    </footer>
 </body>
 </html>
