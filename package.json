@@ -12,5 +12,8 @@
   "license": "ISC",
   "devDependencies": {
     "prettier-plugin-tailwindcss": "^0.6.8"
+  },
+  "dependencies": {
+    "@emailjs/browser": "^4.4.1"
   }
 }
