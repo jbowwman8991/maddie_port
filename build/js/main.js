@@ -1,8 +1,7 @@
-var year = document.getElementById('year');
-
-year.innerHTML = new Date().getFullYear();
-
 const initApp = () => {
+    var year = document.getElementById('year');
+    
+    year.innerHTML = new Date().getFullYear();
 
     const hamburgerBtn = document.getElementById('hamburger-button')
     const mobileMenu = document.getElementById('mobile-menu')
@@ -159,6 +158,23 @@ const initApp = () => {
 
 
 
+
+
+
+
+
+
+
+
+    /** 
+     * todo: add contactPage
+     * todo: add toggleContactPage
+     * todo: add hiding contactPage
+     * 
+     * todo: modify mobile menu to navigate to homePage, workPage, aboutPage, and contactPage
+     * 
+     * todo: edit themes so that they modify more than bg
+     */
 
     const homePage = document.getElementById('homePage')
     const workPage = document.getElementById('workPage')
