@@ -1,7 +1,8 @@
-const initApp = () => {
-    var year = document.getElementById('year');
+var year = document.getElementById('year');
 
-    year.innerHTML = new Date().getFullYear();
+year.innerHTML = new Date().getFullYear();
+
+const initApp = () => {
 
     const hamburgerBtn = document.getElementById('hamburger-button')
     const mobileMenu = document.getElementById('mobile-menu')
@@ -174,49 +175,28 @@ const initApp = () => {
 
 
 
-    // const homePage = document.getElementById('homePage')
-    // const workPage = document.getElementById('workPage')
-    // const aboutPage = ''
-    // const contactPage = ''
+    const homePage = document.getElementById('homePage')
+    const workPage = document.getElementById('workPage')
+    
+    const toggleHomePage = () => {
+        if (homePage.classList.contains('hidden')) { // if home hidden
+            homePage.classList.toggle('hidden') // unhide home
+            workPage.classList.toggle('hidden') // hide work
+        }
+    }
 
-    // const homeBtn = document.getElementById('homeBtn')
-    // const workBtn = document.getElementById('workBtn')
-    // const aboutBtn = document.getElementById('aboutBtn')
-    // const contactBtn = document.getElementById('contactBtn')    
+    const toggleWorkPage = () => {
+        if (workPage.classList.contains('hidden')) {
+            workPage.classList.toggle('hidden')
+            homePage.classList.toggle('hidden')
+        }
+    }
 
-    // const toggleHomePage = () => {
-    //     if (homePage.classList.contains('hidden')) {
-    //         homePage.classList.toggle('hidden')
-    //     }
-    //     if (!workPage.classList.contains('hidden')) {
-    //         workPage.classList.toggle('hidden')
-    //     }
-    //     if (aboutPage.classList.contains('hidden')) {
-    //         aboutPage.classList.toggle('hidden')
-    //     }
-    //     if (contactPage.classList.contains('hidden')) {
-    //         contactPage.classList.toggle('hidden')
-    //     }
-    // }
-
-    // homeBtn.addEventListener('click', toggleHomePage)
-
-    // const toggleWorkPage = () => {
-    //     if (workPage.classList.contains('hidden')) {
-    //         workPage.classList.toggle('hidden')
-    //     }
-    //     if (!homePage.classList.contains('hidden')) {
-    //         homePage.classList.toggle('hidden')
-    //     }
-    //     if (aboutPage.classList.contains('hidden')) {
-    //         aboutPage.classList.toggle('hidden')
-    //     }
-    //     if (contactPage.classList.contains('hidden')) {
-    //         contactPage.classList.toggle('hidden')
-    //     }
-    // }
-
-    // workBtn.addEventListener('click', toggleWorkPage)
+    const homeBtn = document.getElementById('homeBtn')
+    homeBtn.addEventListener('click', toggleHomePage)
+    
+    const workBtn = document.getElementById('workBtn')
+    workBtn.addEventListener('click', toggleWorkPage)
 }
 
 document.addEventListener('DOMContentLoaded', initApp)
