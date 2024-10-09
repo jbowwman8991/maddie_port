@@ -155,78 +155,149 @@ const initApp = () => {
     } 
     blue.addEventListener('click', toggleBlueTheme)
 
-
-
-
-
-
-
-
-
-
-
-
     /** 
-     * todo: add contactPage
-     * todo: add toggleContactPage
-     * todo: add hiding contactPage
-     * 
-     * todo: modify mobile menu to navigate to homePage, workPage, aboutPage, and contactPage
-     * 
      * todo: edit themes so that they modify more than bg
+     * todo: edit mobile menu to show correct bg color
      */
 
     const homePage = document.getElementById('homePage')
     const workPage = document.getElementById('workPage')
     const aboutPage = document.getElementById('aboutPage')
+    const contactPage = document.getElementById('contactPage')
     
     const toggleHomePage = () => {
-        if (homePage.classList.contains('hidden')) { 
-            homePage.classList.toggle('hidden')             
+        if (homePage.classList.contains('hidden')) { homePage.classList.toggle('hidden') }             
+        if (!workPage.classList.contains('hidden')) { workPage.classList.toggle('hidden') }
+        if (!aboutPage.classList.contains('hidden')) { aboutPage.classList.toggle('hidden') }
+        if (!contactPage.classList.contains('hidden')) { contactPage.classList.toggle('hidden') }
+
+        if (homeBtn.classList.contains('text-slate-900')) {
+            homeBtn.classList.toggle('text-slate-900')
+            homeBtn.classList.toggle('text-slate-50')
+            homeBtn.classList.toggle('bg-slate-600')
         }
-        if (!workPage.classList.contains('hidden')) {
-            workPage.classList.toggle('hidden')
+        if (!workBtn.classList.contains('text-slate-900')) {
+            workBtn.classList.toggle('text-slate-900')
+            workBtn.classList.toggle('text-slate-50')
+            workBtn.classList.toggle('bg-slate-600')
         }
-        if (!aboutPage.classList.contains('hidden')) {
-            aboutPage.classList.toggle('hidden')
+        if (!aboutBtn.classList.contains('text-slate-900')) {
+            aboutBtn.classList.toggle('text-slate-900')
+            aboutBtn.classList.toggle('text-slate-50')
+            aboutBtn.classList.toggle('bg-slate-600')
+        }
+        if (!contactBtn.classList.contains('text-slate-900')) {
+            contactBtn.classList.toggle('text-slate-900')
+            contactBtn.classList.toggle('text-slate-50')
+            contactBtn.classList.toggle('bg-slate-600')
         }
     }
 
     const toggleWorkPage = () => {
-        if (workPage.classList.contains('hidden')) {
-            workPage.classList.toggle('hidden')
+        if (workPage.classList.contains('hidden')) { workPage.classList.toggle('hidden') }             
+        if (!homePage.classList.contains('hidden')) { homePage.classList.toggle('hidden') }
+        if (!aboutPage.classList.contains('hidden')) { aboutPage.classList.toggle('hidden') }
+        if (!contactPage.classList.contains('hidden')) { contactPage.classList.toggle('hidden') }
+
+        if (workBtn.classList.contains('text-slate-900')) {
+            workBtn.classList.toggle('text-slate-900')
+            workBtn.classList.toggle('text-slate-50')
+            workBtn.classList.toggle('bg-slate-600')
         }
-        if (!homePage.classList.contains('hidden')) { 
-            homePage.classList.toggle('hidden')             
+        if (!homeBtn.classList.contains('text-slate-900')) {
+            homeBtn.classList.toggle('text-slate-900')
+            homeBtn.classList.toggle('text-slate-50')
+            homeBtn.classList.toggle('bg-slate-600')
         }
-        if (!aboutPage.classList.contains('hidden')) { 
-            aboutPage.classList.toggle('hidden')             
+        if (!aboutBtn.classList.contains('text-slate-900')) {
+            aboutBtn.classList.toggle('text-slate-900')
+            aboutBtn.classList.toggle('text-slate-50')
+            aboutBtn.classList.toggle('bg-slate-600')
+        }
+        if (!contactBtn.classList.contains('text-slate-900')) {
+            contactBtn.classList.toggle('text-slate-900')
+            contactBtn.classList.toggle('text-slate-50')
+            contactBtn.classList.toggle('bg-slate-600')
         }
     }
 
     const toggleAboutPage = () => {
-        if (aboutPage.classList.contains('hidden')) {
-            aboutPage.classList.toggle('hidden')
+        if (aboutPage.classList.contains('hidden')) { aboutPage.classList.toggle('hidden') }             
+        if (!workPage.classList.contains('hidden')) { workPage.classList.toggle('hidden') }
+        if (!homePage.classList.contains('hidden')) { homePage.classList.toggle('hidden') }
+        if (!contactPage.classList.contains('hidden')) { contactPage.classList.toggle('hidden') }
+
+        if (aboutBtn.classList.contains('text-slate-900')) {
+            aboutBtn.classList.toggle('text-slate-900')
+            aboutBtn.classList.toggle('text-slate-50')
+            aboutBtn.classList.toggle('bg-slate-600')
         }
-        if (!homePage.classList.contains('hidden')) { 
-            homePage.classList.toggle('hidden')             
+        if (!workBtn.classList.contains('text-slate-900')) {
+            workBtn.classList.toggle('text-slate-900')
+            workBtn.classList.toggle('text-slate-50')
+            workBtn.classList.toggle('bg-slate-600')
         }
-        if (!workPage.classList.contains('hidden')) { 
-            workPage.classList.toggle('hidden')             
+        if (!homeBtn.classList.contains('text-slate-900')) {
+            homeBtn.classList.toggle('text-slate-900')
+            homeBtn.classList.toggle('text-slate-50')
+            homeBtn.classList.toggle('bg-slate-600')
+        }
+        if (!contactBtn.classList.contains('text-slate-900')) {
+            contactBtn.classList.toggle('text-slate-900')
+            contactBtn.classList.toggle('text-slate-50')
+            contactBtn.classList.toggle('bg-slate-600')
+        }
+    }
+    
+    const toggleContactPage = () => {
+        if (contactPage.classList.contains('hidden')) { contactPage.classList.toggle('hidden') }             
+        if (!workPage.classList.contains('hidden')) { workPage.classList.toggle('hidden') }
+        if (!aboutPage.classList.contains('hidden')) { aboutPage.classList.toggle('hidden') }
+        if (!homePage.classList.contains('hidden')) { homePage.classList.toggle('hidden') }
+
+        if (contactBtn.classList.contains('text-slate-900')) {
+            contactBtn.classList.toggle('text-slate-900')
+            contactBtn.classList.toggle('text-slate-50')
+            contactBtn.classList.toggle('bg-slate-600')
+        }
+        if (!workBtn.classList.contains('text-slate-900')) {
+            workBtn.classList.toggle('text-slate-900')
+            workBtn.classList.toggle('text-slate-50')
+            workBtn.classList.toggle('bg-slate-600')
+        }
+        if (!aboutBtn.classList.contains('text-slate-900')) {
+            aboutBtn.classList.toggle('text-slate-900')
+            aboutBtn.classList.toggle('text-slate-50')
+            aboutBtn.classList.toggle('bg-slate-600')
+        }
+        if (!homeBtn.classList.contains('text-slate-900')) {
+            homeBtn.classList.toggle('text-slate-900')
+            homeBtn.classList.toggle('text-slate-50')
+            homeBtn.classList.toggle('bg-slate-600')
         }
     }
 
     const homeBtn = document.getElementById('homeBtn')
     homeBtn.addEventListener('click', toggleHomePage)
+    const homeMobileBtn = document.getElementById('homeMobileBtn')
+    homeMobileBtn.addEventListener('click', toggleHomePage)
     
     const workBtn = document.getElementById('workBtn')
     workBtn.addEventListener('click', toggleWorkPage)
-
+    const workMobileBtn = document.getElementById('workMobileBtn')
+    workMobileBtn.addEventListener('click', toggleWorkPage)
+    
     const aboutBtn = document.getElementById('aboutBtn')
     aboutBtn.addEventListener('click', toggleAboutPage)
     const moreAboutBtn = document.getElementById('moreAboutBtn')
     moreAboutBtn.addEventListener('click', toggleAboutPage)
-
+    const aboutMobileBtn = document.getElementById('aboutMobileBtn')
+    aboutMobileBtn.addEventListener('click', toggleAboutPage)
+    
+    const contactBtn = document.getElementById('contactBtn')
+    contactBtn.addEventListener('click', toggleContactPage)
+    const contactMobileBtn = document.getElementById('contactMobileBtn')
+    contactMobileBtn.addEventListener('click', toggleContactPage)
 }
 
 document.addEventListener('DOMContentLoaded', initApp)

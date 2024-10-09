@@ -17,25 +17,15 @@
                 <li id="homeBtn" class="flex items-center p-2 text-slate-50 bg-slate-600 rounded-2xl hover:bg-slate-300 hover:text-slate-900 cursor-pointer">
                     <span class="flex-1">HOME</span>
                 </li>
-                <li id="workBtn" class="flex items-center p-2 text-slate-50 bg-slate-600 rounded-2xl hover:bg-slate-300 hover:text-slate-900 cursor-pointer">
+                <li id="workBtn" class="flex items-center p-2 text-slate-900 rounded-2xl hover:bg-slate-300 hover:text-slate-900 cursor-pointer">
                     <span class="flex-1">WORK</span>
                 </li>
-                <li id="aboutBtn" class="flex items-center p-2 text-slate-50 bg-slate-600 rounded-2xl hover:bg-slate-300 hover:text-slate-900 cursor-pointer">
+                <li id="aboutBtn" class="flex items-center p-2 text-slate-900 rounded-2xl hover:bg-slate-300 hover:text-slate-900 cursor-pointer">
                     <span class="flex-1">ABOUT</span>
                 </li>
-                <li>
-                    <a href="" class="flex items-center p-2 text-slate-900 rounded-2xl hover:bg-slate-600 hover:text-slate-50 group">
-                        <span id="contactBtn" class="flex-1">CONTACT</span>
-                    </a>
+                <li id="contactBtn" class="flex items-center p-2 text-slate-900 rounded-2xl hover:bg-slate-300 hover:text-slate-900 cursor-pointer">
+                    <span class="flex-1">CONTACT</span>
                 </li>
-                <!-- <li>
-                    <a href="#" class="flex items-center p-2 text-slate-900 rounded-lg hover:bg-slate-600 hover:text-slate-50 group">
-                    <span class="flex-1">TEST</span>
-                    </a>
-                </li> -->
-                <!-- <button class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">
-                    Button
-                </button> -->
             </ul>
         </div>
         <div class="-mr-8 -mt-2">
@@ -44,14 +34,23 @@
         </div>
     </aside>
 
-    <div id="homePage" class="absolute top-0 left-0 w-full">
+    <div class="p-6">
+        <button id="hamburger-button" class="text-3xl md:hidden relative w-8 h-8">
+            <!-- &#9776; -->
+            <div class="bg-slate-900 w-8 h-1 rounded absolute top-4 -mt-0.5 transition-all duration-500 before:content-[''] before:bg-slate-900 before:w-8 before:h-1 before:rounded before:absolute before:-translate-x-4 before:-translate-y-3 before:transition-all before:duration-500 after:content-[''] after:bg-slate-900 after:w-8 after:h-1 after:rounded after:absolute after:-translate-x-4 after:translate-y-3 after:transition-all after:duration-500"></div>
+        </button>
+    </div>
+    <section id="mobile-menu" class="absolute z-50 top-14 bg-slate-50 text-slate-900 w-full text-5xl flex-col justify-content-center origin-top animate-open-menu hidden">
+        <nav class="flex flex-col min-h-screen items-center py-8 font-kalam font-bold" aria-label="mobile">
+            <p id="homeMobileBtn" class="w-full text-center py-6 hover:opacity-90">HOME</p>
+            <p id="workMobileBtn" class="w-full text-center py-6 hover:opacity-90">WORK</p>
+            <p id="aboutMobileBtn" class="w-full text-center py-6 hover:opacity-90">ABOUT</p>
+            <p id="contactMobileBtn" class="w-full text-center py-6 hover:opacity-90">CONTACT</p>            
+        </nav>
+    </section>
+
+    <div id="homePage" class="absolute top-16 sm:top-0 left-0 w-full">
         <header id="header" class="text-slate-900 top-0 z-10 ml-0 md:ml-36 mr-0 md:mr-36">
-            <div class="p-6">
-                <button id="hamburger-button" class="text-3xl md:hidden relative w-8 h-8">
-                    <!-- &#9776; -->
-                    <div class="bg-slate-900 w-8 h-1 rounded absolute top-4 -mt-0.5 transition-all duration-500 before:content-[''] before:bg-slate-900 before:w-8 before:h-1 before:rounded before:absolute before:-translate-x-4 before:-translate-y-3 before:transition-all before:duration-500 after:content-[''] after:bg-slate-900 after:w-8 after:h-1 after:rounded after:absolute after:-translate-x-4 after:translate-y-3 after:transition-all after:duration-500"></div>
-                </button>
-            </div>
             <section class="max-w-4xl mx-auto p-4 flex flex-row justify-between">
                 <div>
                     <h1 class="text-5xl sm:text-4xl font-kalam font-bold text-left mb-1 mt-0 md:mt-16 text-slate-900">
@@ -59,17 +58,6 @@
                     </h1>
                     <p class="text-xl sm:text-lg font-kalam font-bold text-left mb-1 text-slate-600">I MAKE CUSTOM ART, JUST FOR YOU!</p>
                 </div>
-            </section>
-            <section id="mobile-menu" class="absolute z-50 top-14 bg-slate-50 text-slate-900 w-full text-5xl flex-col justify-content-center origin-top animate-open-menu hidden">
-                <!-- <button class="text-8xl self-end px-6">
-                        &times;
-                    </button> -->
-                <nav class="flex flex-col min-h-screen items-center py-8 font-kalam font-bold" aria-label="mobile">
-                    <a href="#" class="w-full text-center py-6 hover:opacity-90">HOME</a>
-                    <a href="html/work.html" class="w-full text-center py-6 hover:opacity-90">WORK</a>
-                    <a href="html/about.html" class="w-full text-center py-6 hover:opacity-90">ABOUT</a>
-                    <a href="html/contact.html" class="w-full text-center py-6 hover:opacity-90">CONTACT</a>
-                </nav>
             </section>
         </header>
         <main class="ml-0 md:ml-36 mr-0 md:mr-36">
@@ -124,62 +112,6 @@
                     </div>
                 </div>
             </section>
-            <!-- <section id="about" class="max-w-4xl mx-auto bg-slate-100 p-6 my-12 scroll-mt-24">
-                <h2 class="text-3xl font-bold text-center sm:text-left sm:text-4xl mb-6 text-slate-900">
-                    ABOUT
-                </h2>
-                <p class="text-xl sm:text-lg mt-4 text-center sm:text-left text-slate-700">
-                    Voluptate velit nisi culpa sunt voluptate nostrud reprehenderit cillum velit incididunt consequat adipisicing nostrud fugiat. Mollit ipsum aliquip pariatur ipsum excepteur do occaecat cillum anim exercitation. Eu mollit amet irure irure officia proident nostrud. Incididunt officia incididunt tempor occaecat cillum reprehenderit do est ad. Tempor nisi cillum cillum veniam id cillum culpa irure. Lorem minim elit irure ad tempor deserunt labore aliquip dolor adipisicing ea proident amet anim.
-                </p>
-                <p class="text-xl sm:text-lg mt-4 text-center sm:text-left text-slate-700">
-                    Eu et laborum fugiat velit laboris amet sint culpa. Ullamco aute dolor ut ullamco consectetur cillum occaecat veniam incididunt. Non commodo anim veniam veniam amet. Cillum laboris consectetur ut mollit proident reprehenderit quis minim.
-                </p>
-                <p class="text-xl sm:text-lg mt-4 text-center sm:text-left text-slate-700">
-                    Aute consequat exercitation occaecat elit non. Pariatur laboris occaecat duis commodo voluptate pariatur excepteur. In duis excepteur et ea. Culpa pariatur ipsum aute nisi cupidatat ut occaecat cupidatat ea adipisicing sit. In enim officia Lorem elit. Id consectetur labore quis consectetur do mollit aute officia.
-                </p>
-            </section>
-            <section id="contact" class="max-w-4xl mx-auto p-6 my-12 scroll-mt-24">
-                <h2 class="text-3xl font-bold text-center sm:text-left sm:text-4xl mb-6 text-slate-900">
-                    CONTACT
-                </h2>
-                <form action="" class="max-w-4xl mx-auto text-xl sm:text-lg flex flex-col items-left gap-4">
-                    <label for="email">Email:</label>
-                    <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        required
-                        minlength="3"
-                        maxlength="60"
-                        placeholder="Your Email"
-                        class="w-full sm:w-1/2 text-black text-xl sm:text-lg p-3 rounded-xl border border-solid border-slate-300"
-                    />
-                    <label for="subject">Subject:</label>
-                    <input
-                        type="text"
-                        id="subject"
-                        name="subject"
-                        required
-                        minlength="3"
-                        maxlength="60"
-                        placeholder="Your Subject"
-                        class="w-full sm:w-1/2 text-black text-xl sm:text-lg p-3 rounded-xl border border-solid border-slate-300"
-                    />
-                    <label for="message">Message:</label>
-                    <textarea
-                        name="message"
-                        id="message"
-                        cols="30"
-                        rows="10"
-                        placeholder="Your Message"
-                        required
-                        class="w-full text-black text-xl sm:text-lg p-3 rounded-xl border border-solid border-slate-300"
-                    ></textarea>
-                    <button class="bg-slate-900 hover:bg-slate-300 active:bg-slate-500 text-white font-bold hover:text-slate-900 p-3 w-48 rounded-xl border border-solid border-slate-900 dark:border-none">
-                        SUBMIT
-                    </button>
-                </form>
-            </section> -->
         </main>
         <footer id="footer" class="text-slate-600 text-base ml-0 md:ml-36 mt-2 sm:mt-8 mr-0 md:mr-36">
             <section class="max-w-4xl mx-auto p-4 flex flex-col sm:flex-row sm:justify-between">
@@ -190,45 +122,9 @@
             </section>
         </footer>
     </div>
-    <aside id="default-sidebar" class="fixed top-0 right-0 z-40 w-36 h-screen transition-transform translate-x-full md:translate-x-0 flex items-center flex-col justify-center" aria-label="Cumstomize">
-        <div class="items-end">
-            <div class="font-kalam font-bold text-slate-600 -rotate-12">CUSTOMIZE!</div>
-            <div class="text-6xl -mt-5 -ml-2 text-slate-600 -rotate-12">&#10553;</div>
-        </div>
-        <div class="max-h-full px-7 overflow-y-auto flex items-center">
-            <ul class="space-y-2">
-                <li>
-                    <div id="white" class="w-10 h-10 rounded-full bg-slate-900 flex justify-center items-center cursor-pointer">
-                        <div class="w-8 h-8 rounded-full bg-slate-50"></div>
-                    </div>
-                </li>
-                <li>
-                    <div id="pink" class="w-10 h-10 rounded-full bg-slate-300 flex justify-center items-center cursor-pointer">
-                        <div class="w-8 h-8 rounded-full bg-customizing-pink"></div>
-                    </div>
-                </li>
-                <li>
-                    <div id="green" class="w-10 h-10 rounded-full bg-slate-300 flex justify-center items-center cursor-pointer">
-                        <div class="w-8 h-8 rounded-full bg-customizing-green"></div>
-                    </div>
-                </li>
-                <li>
-                    <div id="blue" class="w-10 h-10 rounded-full bg-slate-300 flex justify-center items-center cursor-pointer">
-                        <div class="w-8 h-8 rounded-full bg-customizing-blue"></div>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </aside>
 
-    <div id="workPage" class="absolute top-0 left-0 w-full hidden">
+    <div id="workPage" class="absolute top-16 sm:top-0 left-0 w-full hidden">
         <header class="text-slate-900 top-0 z-10 ml-0 md:ml-36 mr-0 md:mr-36">
-            <div class="p-6">
-                <button id="hamburger-button" class="text-3xl md:hidden relative w-8 h-8">
-                    <!-- &#9776; -->
-                    <div class="bg-slate-900 w-8 h-1 rounded absolute top-4 -mt-0.5 transition-all duration-500 before:content-[''] before:bg-slate-900 before:w-8 before:h-1 before:rounded before:absolute before:-translate-x-4 before:-translate-y-3 before:transition-all before:duration-500 after:content-[''] after:bg-slate-900 after:w-8 after:h-1 after:rounded after:absolute after:-translate-x-4 after:translate-y-3 after:transition-all after:duration-500"></div>
-                </button>
-            </div>
             <section class="max-w-4xl mx-auto p-4 flex flex-row justify-between">
                 <div>
                     <h1 class="text-5xl sm:text-4xl font-kalam font-bold text-left mb-1 mt-2 md:mt-16 text-slate-900">
@@ -236,17 +132,6 @@
                     </h1>
                     <p class="text-xl sm:text-lg font-kalam font-bold text-left mb-1 text-slate-600">PERSONALIZED ART THAT TELLS A STORY, BROUGHT TO LIFE!</p>
                 </div>
-            </section>
-            <section id="mobile-menu" class="absolute z-50 top-14 bg-slate-50 text-slate-900 w-full text-5xl flex-col justify-content-center origin-top animate-open-menu hidden">
-                <!-- <button class="text-8xl self-end px-6">
-                        &times;
-                    </button> -->
-                <nav class="flex flex-col min-h-screen items-center py-8 font-kalam font-bold" aria-label="mobile">
-                    <a href="../index.html" class="w-full text-center py-6 hover:opacity-90">HOME</a>
-                    <a href="#" class="w-full text-center py-6 hover:opacity-90">WORK</a>
-                    <a href="about.html" class="w-full text-center py-6 hover:opacity-90">ABOUT</a>
-                    <a href="contact.html" class="w-full text-center py-6 hover:opacity-90">CONTACT</a>
-                </nav>
             </section>
         </header>
         <main class="ml-0 md:ml-36 mr-0 md:mr-36">
@@ -310,14 +195,8 @@
         </footer>
     </div>
 
-    <div id="aboutPage" class="absolute top-0 left-0 w-full hidden">
+    <div id="aboutPage" class="absolute top-16 sm:top-0 left-0 w-full hidden">
         <header id="header" class="text-slate-900 top-0 z-10 ml-0 md:ml-36 mr-0 md:mr-36">
-            <div class="p-6">
-                <button id="hamburger-button" class="text-3xl md:hidden relative w-8 h-8">
-                    <!-- &#9776; -->
-                    <div class="bg-slate-900 w-8 h-1 rounded absolute top-4 -mt-0.5 transition-all duration-500 before:content-[''] before:bg-slate-900 before:w-8 before:h-1 before:rounded before:absolute before:-translate-x-4 before:-translate-y-3 before:transition-all before:duration-500 after:content-[''] after:bg-slate-900 after:w-8 after:h-1 after:rounded after:absolute after:-translate-x-4 after:translate-y-3 after:transition-all after:duration-500"></div>
-                </button>
-            </div>
             <section class="max-w-4xl mx-auto p-4 flex flex-row justify-between">
                 <div>
                     <h1 class="text-5xl sm:text-4xl font-kalam font-bold text-left mb-1 mt-0 md:mt-16 text-slate-900">
@@ -325,17 +204,6 @@
                     </h1>
                     <p class="text-xl sm:text-lg font-kalam font-bold text-left mb-1 text-slate-600">I MAKE CUSTOM ART, JUST FOR YOU!</p>
                 </div>
-            </section>
-            <section id="mobile-menu" class="absolute z-50 top-14 bg-slate-50 text-slate-900 w-full text-5xl flex-col justify-content-center origin-top animate-open-menu hidden">
-                <!-- <button class="text-8xl self-end px-6">
-                        &times;
-                    </button> -->
-                <nav class="flex flex-col min-h-screen items-center py-8 font-kalam font-bold" aria-label="mobile">
-                    <a href="../index.html" class="w-full text-center py-6 hover:opacity-90">HOME</a>
-                    <a href="work.html" class="w-full text-center py-6 hover:opacity-90">WORK</a>
-                    <a href="#" class="w-full text-center py-6 hover:opacity-90">ABOUT</a>
-                    <a href="contact.html" class="w-full text-center py-6 hover:opacity-90">CONTACT</a>
-                </nav>
             </section>
         </header>
         <main class="ml-0 md:ml-36 mr-0 md:mr-36">
@@ -384,5 +252,107 @@
         </footer>
     </div>
 
+    <div id="contactPage" class="absolute top-16 sm:top-0 left-0 w-full hidden">
+        <header class="text-slate-900 top-0 z-10 ml-0 md:ml-36 mr-0 md:mr-36">
+            <section class="max-w-4xl mx-auto p-4 flex flex-row justify-between">
+                <div>
+                    <h1 class="text-5xl sm:text-4xl font-kalam font-bold text-left mb-1 mt-2 md:mt-16 text-slate-900">
+                        <a href="#">CONTACT ME</a>
+                    </h1>
+                    <p class="text-xl sm:text-lg font-kalam font-bold text-left mb-1 text-slate-600">LET'S CHAT! MESSAGE ME TO GET TO KNOW ME AND ORDER CUSTOM PIECES!</p>
+                </div>
+            </section>
+        </header>
+        <main class="ml-0 md:ml-36 mr-0 md:mr-36">
+            <section id="socials" class="max-w-4xl mx-auto p-4">
+                <div class="flex flex-row">
+                    <a href="https://www.instagram.com/madelinebowmann/" class="w-12 my-2 mr-2" target="_blank">
+                        <img src="img/instagram_icon.png" alt="Instagram">
+                    </a>
+                    <a href="https://www.facebook.com/madeline.bowman.792" class="w-12 m-2" target="_blank">
+                        <img src="img/facebook-icon.png" alt="Facebook">
+                    </a>
+                </div>
+            </section>
+            <section id="contact" class="max-w-4xl mx-auto p-4 mb-12">
+                <form action="" id="contact-form" class="max-w-4xl mx-auto text-xl sm:text-lg flex flex-col items-left gap-2 text-slate-900">
+                    <label for="email" class="font-kalam font-bold pt-2">EMAIL:</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        required
+                        minlength="3"
+                        maxlength="60"
+                        placeholder="Your Email"
+                        class="w-full sm:w-1/2 text-slate-900 text-lg sm:text-base p-2 rounded-2xl border border-solid border-slate-300"
+                    />
+                    <label for="subject" class="font-kalam font-bold pt-2">SUBJECT:</label>
+                    <input
+                        type="text"
+                        id="subject"
+                        name="subject"
+                        required
+                        minlength="3"
+                        maxlength="60"
+                        placeholder="Your Subject"
+                        class="w-full sm:w-1/2 text-slate-900 text-lg sm:text-base p-2 rounded-2xl border border-solid border-slate-300"
+                    />
+                    <label for="message" class="font-kalam font-bold pt-2">MESSAGE:</label>
+                    <textarea
+                        name="message"
+                        id="message"
+                        cols="30"
+                        rows="10"
+                        placeholder="Your Message"
+                        required
+                        class="w-full text-slate-900 text-lg sm:text-base p-2 rounded-2xl border border-solid border-slate-300"
+                    ></textarea>
+                    <button type="submit" class="flex items-center p-2 text-slate-50 font-kalam font-bold bg-slate-600 w-28 rounded-2xl hover:bg-slate-300 hover:text-slate-900 group">
+                        <span class="flex-1">SUBMIT</span>
+                    </button>
+                </form>
+            </section>
+        </main>
+        <footer id="footer" class="text-slate-600 text-base ml-0 md:ml-36 mt-2 sm:mt-8 mr-0 md:mr-36">
+            <section class="max-w-4xl mx-auto p-4 flex flex-col sm:flex-row sm:justify-between">
+                <div class="flex flex-col text-center sm:text-left font-kalam">
+                    <p class="">COPYRIGHT &copy; MADDIE BOWMAN <span id="year">2024</span></p>
+                    <p class="">ALL RIGHTS RESERVED</p>
+                </div>
+            </section>
+        </footer>
+    </div>
+
+    <aside id="default-sidebar" class="fixed top-0 right-0 z-40 w-36 h-screen transition-transform translate-x-full md:translate-x-0 flex items-center flex-col justify-center" aria-label="Cumstomize">
+        <div class="items-end">
+            <div class="font-kalam font-bold text-slate-600 -rotate-12">CUSTOMIZE!</div>
+            <div class="text-6xl -mt-5 -ml-2 text-slate-600 -rotate-12">&#10553;</div>
+        </div>
+        <div class="max-h-full px-7 overflow-y-auto flex items-center">
+            <ul class="space-y-2">
+                <li>
+                    <div id="white" class="w-10 h-10 rounded-full bg-slate-900 flex justify-center items-center cursor-pointer">
+                        <div class="w-8 h-8 rounded-full bg-slate-50"></div>
+                    </div>
+                </li>
+                <li>
+                    <div id="pink" class="w-10 h-10 rounded-full bg-slate-300 flex justify-center items-center cursor-pointer">
+                        <div class="w-8 h-8 rounded-full bg-customizing-pink"></div>
+                    </div>
+                </li>
+                <li>
+                    <div id="green" class="w-10 h-10 rounded-full bg-slate-300 flex justify-center items-center cursor-pointer">
+                        <div class="w-8 h-8 rounded-full bg-customizing-green"></div>
+                    </div>
+                </li>
+                <li>
+                    <div id="blue" class="w-10 h-10 rounded-full bg-slate-300 flex justify-center items-center cursor-pointer">
+                        <div class="w-8 h-8 rounded-full bg-customizing-blue"></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </aside>
 </body>
 </html>
