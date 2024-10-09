@@ -44,19 +44,15 @@ const initApp = () => {
 
         if (!body.classList.contains('bg-slate-50')) {
             body.classList.toggle('bg-slate-50')
-            header.classList.toggle('bg-slate-50')
         }
         if (body.classList.contains('bg-customizing-pink')) {
             body.classList.toggle('bg-customizing-pink')
-            header.classList.toggle('bg-customizing-pink')
         }
         if (body.classList.contains('bg-customizing-green')) {
             body.classList.toggle('bg-customizing-green')
-            header.classList.toggle('bg-customizing-green')
         }
         if (body.classList.contains('bg-customizing-blue')) {
             body.classList.toggle('bg-customizing-blue')
-            header.classList.toggle('bg-customizing-blue')
         }
     } 
     white.addEventListener('click', toggleWhiteTheme)
@@ -81,15 +77,12 @@ const initApp = () => {
 
         if (!body.classList.contains('bg-customizing-pink')) {
             body.classList.toggle('bg-customizing-pink')
-            header.classList.toggle('bg-customizing-pink')
         }
         if (body.classList.contains('bg-slate-50')) {
             body.classList.toggle('bg-slate-50')
-            header.classList.toggle('bg-slate-50')
         }
         if (body.classList.contains('bg-customizing-green')) {
             body.classList.toggle('bg-customizing-green')
-            header.classList.toggle('bg-customizing-green')
         }
         if (body.classList.contains('bg-customizing-blue')) {
             body.classList.toggle('bg-customizing-blue')
@@ -117,19 +110,15 @@ const initApp = () => {
 
         if (!body.classList.contains('bg-customizing-green')) {
             body.classList.toggle('bg-customizing-green')
-            header.classList.toggle('bg-customizing-green')
         }
         if (body.classList.contains('bg-customizing-pink')) {
             body.classList.toggle('bg-customizing-pink')
-            header.classList.toggle('bg-customizing-pink')
         }
         if (body.classList.contains('bg-slate-50')) {
             body.classList.toggle('bg-slate-50')
-            header.classList.toggle('bg-slate-50')
         }
         if (body.classList.contains('bg-customizing-blue')) {
             body.classList.toggle('bg-customizing-blue')
-            header.classList.toggle('bg-customizing-blue')
         }
     } 
     green.addEventListener('click', toggleGreenTheme)
@@ -154,19 +143,15 @@ const initApp = () => {
 
         if (!body.classList.contains('bg-customizing-blue')) {
             body.classList.toggle('bg-customizing-blue')
-            header.classList.toggle('bg-customizing-blue')
         }
         if (body.classList.contains('bg-customizing-pink')) {
             body.classList.toggle('bg-customizing-pink')
-            header.classList.toggle('bg-customizing-pink')
         }
         if (body.classList.contains('bg-customizing-green')) {
             body.classList.toggle('bg-customizing-green')
-            header.classList.toggle('bg-customizing-green')
         }
         if (body.classList.contains('bg-slate-50')) {
             body.classList.toggle('bg-slate-50')
-            header.classList.toggle('bg-slate-50')
         }
     } 
     blue.addEventListener('click', toggleBlueTheme)
@@ -177,18 +162,41 @@ const initApp = () => {
 
     const homePage = document.getElementById('homePage')
     const workPage = document.getElementById('workPage')
+    const aboutPage = document.getElementById('aboutPage')
     
     const toggleHomePage = () => {
-        if (homePage.classList.contains('hidden')) { // if home hidden
-            homePage.classList.toggle('hidden') // unhide home
-            workPage.classList.toggle('hidden') // hide work
+        if (homePage.classList.contains('hidden')) { 
+            homePage.classList.toggle('hidden')             
+        }
+        if (!workPage.classList.contains('hidden')) {
+            workPage.classList.toggle('hidden')
+        }
+        if (!aboutPage.classList.contains('hidden')) {
+            aboutPage.classList.toggle('hidden')
         }
     }
 
     const toggleWorkPage = () => {
         if (workPage.classList.contains('hidden')) {
             workPage.classList.toggle('hidden')
-            homePage.classList.toggle('hidden')
+        }
+        if (!homePage.classList.contains('hidden')) { 
+            homePage.classList.toggle('hidden')             
+        }
+        if (!aboutPage.classList.contains('hidden')) { 
+            aboutPage.classList.toggle('hidden')             
+        }
+    }
+
+    const toggleAboutPage = () => {
+        if (aboutPage.classList.contains('hidden')) {
+            aboutPage.classList.toggle('hidden')
+        }
+        if (!homePage.classList.contains('hidden')) { 
+            homePage.classList.toggle('hidden')             
+        }
+        if (!workPage.classList.contains('hidden')) { 
+            workPage.classList.toggle('hidden')             
         }
     }
 
@@ -197,6 +205,12 @@ const initApp = () => {
     
     const workBtn = document.getElementById('workBtn')
     workBtn.addEventListener('click', toggleWorkPage)
+
+    const aboutBtn = document.getElementById('aboutBtn')
+    aboutBtn.addEventListener('click', toggleAboutPage)
+    const moreAboutBtn = document.getElementById('moreAboutBtn')
+    moreAboutBtn.addEventListener('click', toggleAboutPage)
+
 }
 
 document.addEventListener('DOMContentLoaded', initApp)

@@ -20,10 +20,8 @@
                 <li id="workBtn" class="flex items-center p-2 text-slate-50 bg-slate-600 rounded-2xl hover:bg-slate-300 hover:text-slate-900 cursor-pointer">
                     <span class="flex-1">WORK</span>
                 </li>
-                <li>
-                    <a href="" class="flex items-center p-2 text-slate-900 rounded-2xl hover:bg-slate-600 hover:text-slate-50 group">
-                        <span id="aboutBtn" class="flex-1">ABOUT</span>
-                    </a>
+                <li id="aboutBtn" class="flex items-center p-2 text-slate-50 bg-slate-600 rounded-2xl hover:bg-slate-300 hover:text-slate-900 cursor-pointer">
+                    <span class="flex-1">ABOUT</span>
                 </li>
                 <li>
                     <a href="" class="flex items-center p-2 text-slate-900 rounded-2xl hover:bg-slate-600 hover:text-slate-50 group">
@@ -45,8 +43,8 @@
             <div class="font-kalam font-bold text-slate-600 -rotate-3 -mt-4">LET'S CHAT!</div>
         </div>
     </aside>
-    <div id="homePage" class="absolute top-0 left-0 w-full">
 
+    <div id="homePage" class="absolute top-0 left-0 w-full">
         <header id="header" class="text-slate-900 top-0 z-10 ml-0 md:ml-36 mr-0 md:mr-36">
             <div class="p-6">
                 <button id="hamburger-button" class="text-3xl md:hidden relative w-8 h-8">
@@ -87,10 +85,8 @@
                         Nulla mollit pariatur nostrud sint.
                         Incididunt amet magna aliqua elit dolore eu irure eu.
                     </p>
-                    <button class="bg-slate-600 hover:bg-slate-300 text-slate-50 hover:text-slate-900 p-2 w-48 rounded-2xl mt-4 font-kalam font-bold">
-                        <a href="html/about.html">
-                            MORE ABOUT ME
-                        </a>
+                    <button id="moreAboutBtn" class="bg-slate-600 hover:bg-slate-300 text-slate-50 hover:text-slate-900 p-2 w-48 rounded-2xl mt-4 font-kalam font-bold">
+                        MORE ABOUT ME
                     </button>
                 </div>
                 <div class="md:w-1/3 flex">
@@ -193,7 +189,6 @@
                 </div>
             </section>
         </footer>
-        
     </div>
     <aside id="default-sidebar" class="fixed top-0 right-0 z-40 w-36 h-screen transition-transform translate-x-full md:translate-x-0 flex items-center flex-col justify-center" aria-label="Cumstomize">
         <div class="items-end">
@@ -227,36 +222,7 @@
     </aside>
 
     <div id="workPage" class="absolute top-0 left-0 w-full hidden">
-        <!-- <aside id="default-sidebar" class="fixed top-0 left-0 z-40 w-36 h-screen transition-transform -translate-x-full md:translate-x-0 flex items-center flex-col justify-center" aria-label="Sidebar">
-            <div class="max-h-full px-7 overflow-y-auto flex items-center">
-                <ul class="space-y-2 font-bold font-kalam text-center">
-                    <li id="homeBtn" class="flex items-center p-2 text-slate-50 bg-slate-600 rounded-2xl hover:bg-slate-300 hover:text-slate-900 cursor-pointer">
-                        <span class="flex-1">HOME</span>
-                    </li>
-                    <li>
-                        <li id="workBtn" class="flex items-center p-2 text-slate-50 bg-slate-600 rounded-2xl hover:bg-slate-300 hover:text-slate-900 cursor-pointer">
-                            <span class="flex-1">WORK</span>
-                        </li>
-                    </li>
-                    <li>
-                        <a href="" class="flex items-center p-2 text-slate-900 rounded-2xl hover:bg-slate-600 hover:text-slate-50 group">
-                            <span id="aboutBtn" class="flex-1">ABOUT</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="" class="flex items-center p-2 text-slate-900 rounded-2xl hover:bg-slate-600 hover:text-slate-50 group">
-                            <span id="contactBtn" class="flex-1">CONTACT</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="-mr-8 -mt-2">
-                <div class="text-6xl text-slate-600 rotate-180">&#10553;</div>
-                <div class="font-kalam font-bold text-slate-600 -rotate-3 -mt-4">ORDER<br>CUSTOMS!</div>
-            </div>
-        </aside> -->
-
-        <header class="bg-slate-50 text-slate-900 top-0 z-10 ml-0 md:ml-36 mr-0 md:mr-36">
+        <header class="text-slate-900 top-0 z-10 ml-0 md:ml-36 mr-0 md:mr-36">
             <div class="p-6">
                 <button id="hamburger-button" class="text-3xl md:hidden relative w-8 h-8">
                     <!-- &#9776; -->
@@ -283,7 +249,6 @@
                 </nav>
             </section>
         </header>
-
         <main class="ml-0 md:ml-36 mr-0 md:mr-36">
             <section id="header" class="max-w-4xl mx-auto px-4 pb-4 flex flex-col-reverse sm:flex-row items-center gap-8">
                 <div class="w-full md:w-1/2">
@@ -335,38 +300,6 @@
                 </div>
             </section>
         </main>
-
-        <!-- <aside id="default-sidebar" class="fixed top-0 right-0 z-40 w-36 h-screen transition-transform translate-x-full md:translate-x-0 flex items-center flex-col justify-center" aria-label="Cumstomize">
-            <div class="items-end">
-                <div class="font-kalam font-bold text-slate-600 -rotate-12">CUSTOMIZE!</div>
-                <div class="text-6xl -mt-5 -ml-2 text-slate-600 -rotate-12">&#10553;</div>
-            </div>
-            <div class="max-h-full px-7 overflow-y-auto flex items-center">
-                <ul class="space-y-2">
-                    <li>
-                        <div id="white" class="w-10 h-10 rounded-full bg-slate-900 flex justify-center items-center cursor-pointer">
-                            <div class="w-8 h-8 rounded-full bg-slate-50"></div> 
-                        </div>
-                    </li>
-                    <li>
-                        <div id="pink" class="w-10 h-10 rounded-full bg-slate-300 flex justify-center items-center cursor-pointer">
-                            <div class="w-8 h-8 rounded-full bg-customizing-pink"></div> 
-                        </div>
-                    </li>
-                    <li>
-                        <div id="green" class="w-10 h-10 rounded-full bg-slate-300 flex justify-center items-center cursor-pointer">
-                            <div class="w-8 h-8 rounded-full bg-customizing-green"></div> 
-                        </div>
-                    </li>
-                    <li>
-                        <div id="blue" class="w-10 h-10 rounded-full bg-slate-300 flex justify-center items-center cursor-pointer">
-                            <div class="w-8 h-8 rounded-full bg-customizing-blue"></div> 
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </aside> -->
-
         <footer id="footer" class="text-slate-600 text-base ml-0 md:ml-36 mt-2 sm:mt-8 mr-0 md:mr-36">
             <section class="max-w-4xl mx-auto p-4 flex flex-col sm:flex-row sm:justify-between">
                 <div class="flex flex-col text-center sm:text-left font-kalam">
@@ -376,5 +309,80 @@
             </section>
         </footer>
     </div>
+
+    <div id="aboutPage" class="absolute top-0 left-0 w-full hidden">
+        <header id="header" class="text-slate-900 top-0 z-10 ml-0 md:ml-36 mr-0 md:mr-36">
+            <div class="p-6">
+                <button id="hamburger-button" class="text-3xl md:hidden relative w-8 h-8">
+                    <!-- &#9776; -->
+                    <div class="bg-slate-900 w-8 h-1 rounded absolute top-4 -mt-0.5 transition-all duration-500 before:content-[''] before:bg-slate-900 before:w-8 before:h-1 before:rounded before:absolute before:-translate-x-4 before:-translate-y-3 before:transition-all before:duration-500 after:content-[''] after:bg-slate-900 after:w-8 after:h-1 after:rounded after:absolute after:-translate-x-4 after:translate-y-3 after:transition-all after:duration-500"></div>
+                </button>
+            </div>
+            <section class="max-w-4xl mx-auto p-4 flex flex-row justify-between">
+                <div>
+                    <h1 class="text-5xl sm:text-4xl font-kalam font-bold text-left mb-1 mt-0 md:mt-16 text-slate-900">
+                        <a href="#">HI, I'M MADDIE!</a>
+                    </h1>
+                    <p class="text-xl sm:text-lg font-kalam font-bold text-left mb-1 text-slate-600">I MAKE CUSTOM ART, JUST FOR YOU!</p>
+                </div>
+            </section>
+            <section id="mobile-menu" class="absolute z-50 top-14 bg-slate-50 text-slate-900 w-full text-5xl flex-col justify-content-center origin-top animate-open-menu hidden">
+                <!-- <button class="text-8xl self-end px-6">
+                        &times;
+                    </button> -->
+                <nav class="flex flex-col min-h-screen items-center py-8 font-kalam font-bold" aria-label="mobile">
+                    <a href="../index.html" class="w-full text-center py-6 hover:opacity-90">HOME</a>
+                    <a href="work.html" class="w-full text-center py-6 hover:opacity-90">WORK</a>
+                    <a href="#" class="w-full text-center py-6 hover:opacity-90">ABOUT</a>
+                    <a href="contact.html" class="w-full text-center py-6 hover:opacity-90">CONTACT</a>
+                </nav>
+            </section>
+        </header>
+        <main class="ml-0 md:ml-36 mr-0 md:mr-36">
+            <section id="header" class="max-w-4xl mx-auto px-4 pb-4 flex flex-col-reverse justify-center md:flex-row items-center gap-8">
+                <div class="w-full md:w-2/3">
+                    <p class="text-slate-600 text-lg sm:text-base mb-1 sm:mb-4">
+                        Consequat est excepteur qui id officia aliquip ut minim nisi enim est. 
+                        Nulla mollit pariatur nostrud sint. 
+                        Incididunt amet magna aliqua elit dolore eu irure eu.
+                    </p>
+                    <p class="text-slate-600 text-lg sm:text-base mb-1 sm:mb-4">
+                        In Lorem ipsum irure amet sunt fugiat sit et dolor adipisicing magna. 
+                        Aliqua occaecat ad eu velit elit Lorem exercitation voluptate do officia do reprehenderit excepteur aute. 
+                        Duis qui fugiat incididunt nostrud enim. 
+                        Labore minim anim incididunt consequat cillum occaecat esse qui velit nulla minim Lorem ut.
+                    </p>
+                    <p class="text-slate-600 text-lg sm:text-base mb-1 sm:mb-4">
+                        Occaecat aute officia eiusmod cupidatat magna officia voluptate dolor ullamco. 
+                        Dolore quis ipsum aute aliqua occaecat aute sit. 
+                        Ullamco culpa quis nostrud aliqua reprehenderit incididunt magna laborum consectetur magna. 
+                        Reprehenderit ex magna duis pariatur.
+                    </p>
+                    <p class="text-slate-600 text-lg sm:text-base mb-1 sm:mb-4">
+                        Est exercitation pariatur non culpa ipsum culpa ipsum ea anim do est. 
+                        Officia cillum anim magna sunt cillum aliquip esse adipisicing. 
+                        Ut adipisicing ipsum laborum pariatur culpa exercitation incididunt enim non sunt. 
+                        Proident ex anim ad ullamco enim amet id esse quis.
+                    </p>
+                </div>
+                <div class="w-full md:w-1/3 flex justify-center items-center">
+                    <div class="w-60 h-60 rounded-full bg-slate-300 flex justify-center items-center">
+                        <div class="w-56 h-56 rounded-full bg-slate-300">
+                            <img src="img/maddie.png" alt="ME!" class="w-56 h-56 mx-auto rounded-full aspect-square object-cover">
+                        </div> 
+                    </div> 
+                </div>
+            </section>
+        </main>
+        <footer id="footer" class="text-slate-600 text-base ml-0 md:ml-36 mt-2 sm:mt-8 mr-0 md:mr-36">
+            <section class="max-w-4xl mx-auto p-4 flex flex-col sm:flex-row sm:justify-between">
+                <div class="flex flex-col text-center sm:text-left font-kalam">
+                    <p class="">COPYRIGHT &copy; MADDIE BOWMAN <span id="year">2024</span></p>
+                    <p class="">ALL RIGHTS RESERVED</p>
+                </div>
+            </section>
+        </footer>
+    </div>
+
 </body>
 </html>
