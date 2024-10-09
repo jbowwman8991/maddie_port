@@ -23,6 +23,11 @@ const initApp = () => {
     const green = document.getElementById('green')
     const blue = document.getElementById('blue')
 
+    const whiteMobile = document.getElementById('whiteMobile')
+    const pinkMobile = document.getElementById('pinkMobile')
+    const greenMobile = document.getElementById('greenMobile')
+    const blueMobile = document.getElementById('blueMobile')
+    
     const body = document.getElementById('body')
 
     const toggleWhiteTheme = () => {
@@ -41,6 +46,23 @@ const initApp = () => {
         if (blue.classList.contains('bg-slate-900')) {
             blue.classList.toggle('bg-slate-900')
             blue.classList.toggle('bg-slate-300')
+        }
+
+        if (!whiteMobile.classList.contains('bg-slate-900')) {
+            whiteMobile.classList.toggle('bg-slate-900')
+            whiteMobile.classList.toggle('bg-slate-300')
+        }
+        if (pinkMobile.classList.contains('bg-slate-900')) {
+            pinkMobile.classList.toggle('bg-slate-900')
+            pinkMobile.classList.toggle('bg-slate-300')
+        }
+        if (greenMobile.classList.contains('bg-slate-900')) {
+            greenMobile.classList.toggle('bg-slate-900')
+            greenMobile.classList.toggle('bg-slate-300')
+        }
+        if (blueMobile.classList.contains('bg-slate-900')) {
+            blueMobile.classList.toggle('bg-slate-900')
+            blueMobile.classList.toggle('bg-slate-300')
         }
 
         if (!body.classList.contains('bg-slate-50')) {
@@ -70,6 +92,7 @@ const initApp = () => {
         }
     } 
     white.addEventListener('click', toggleWhiteTheme)
+    whiteMobile.addEventListener('click', toggleWhiteTheme)
 
     const togglePinkTheme = () => {
         if (!pink.classList.contains('bg-slate-900')) {
@@ -87,6 +110,23 @@ const initApp = () => {
         if (blue.classList.contains('bg-slate-900')) {
             blue.classList.toggle('bg-slate-900')
             blue.classList.toggle('bg-slate-300')
+        }
+
+        if (!pinkMobile.classList.contains('bg-slate-900')) {
+            pinkMobile.classList.toggle('bg-slate-900')
+            pinkMobile.classList.toggle('bg-slate-300')
+        }
+        if (whiteMobile.classList.contains('bg-slate-900')) {
+            whiteMobile.classList.toggle('bg-slate-900')
+            whiteMobile.classList.toggle('bg-slate-300')
+        }
+        if (greenMobile.classList.contains('bg-slate-900')) {
+            greenMobile.classList.toggle('bg-slate-900')
+            greenMobile.classList.toggle('bg-slate-300')
+        }
+        if (blueMobile.classList.contains('bg-slate-900')) {
+            blueMobile.classList.toggle('bg-slate-900')
+            blueMobile.classList.toggle('bg-slate-300')
         }
 
         if (!body.classList.contains('bg-customizing-pink')) {
@@ -116,6 +156,7 @@ const initApp = () => {
         }
     } 
     pink.addEventListener('click', togglePinkTheme)
+    pinkMobile.addEventListener('click', togglePinkTheme)
 
     const toggleGreenTheme = () => {
         if (!green.classList.contains('bg-slate-900')) {
@@ -133,6 +174,23 @@ const initApp = () => {
         if (blue.classList.contains('bg-slate-900')) {
             blue.classList.toggle('bg-slate-900')
             blue.classList.toggle('bg-slate-300')
+        }
+
+        if (!greenMobile.classList.contains('bg-slate-900')) {
+            greenMobile.classList.toggle('bg-slate-900')
+            greenMobile.classList.toggle('bg-slate-300')
+        }
+        if (pinkMobile.classList.contains('bg-slate-900')) {
+            pinkMobile.classList.toggle('bg-slate-900')
+            pinkMobile.classList.toggle('bg-slate-300')
+        }
+        if (whiteMobile.classList.contains('bg-slate-900')) {
+            whiteMobile.classList.toggle('bg-slate-900')
+            whiteMobile.classList.toggle('bg-slate-300')
+        }
+        if (blueMobile.classList.contains('bg-slate-900')) {
+            blueMobile.classList.toggle('bg-slate-900')
+            blueMobile.classList.toggle('bg-slate-300')
         }
 
         if (!body.classList.contains('bg-customizing-green')) {
@@ -162,6 +220,7 @@ const initApp = () => {
         }
     } 
     green.addEventListener('click', toggleGreenTheme)
+    greenMobile.addEventListener('click', toggleGreenTheme)
 
     const toggleBlueTheme = () => {
         if (!blue.classList.contains('bg-slate-900')) {
@@ -179,6 +238,23 @@ const initApp = () => {
         if (white.classList.contains('bg-slate-900')) {
             white.classList.toggle('bg-slate-900')
             white.classList.toggle('bg-slate-300')
+        }
+
+        if (!blueMobile.classList.contains('bg-slate-900')) {
+            blueMobile.classList.toggle('bg-slate-900')
+            blueMobile.classList.toggle('bg-slate-300')
+        }
+        if (pinkMobile.classList.contains('bg-slate-900')) {
+            pinkMobile.classList.toggle('bg-slate-900')
+            pinkMobile.classList.toggle('bg-slate-300')
+        }
+        if (greenMobile.classList.contains('bg-slate-900')) {
+            greenMobile.classList.toggle('bg-slate-900')
+            greenMobile.classList.toggle('bg-slate-300')
+        }
+        if (whiteMobile.classList.contains('bg-slate-900')) {
+            whiteMobile.classList.toggle('bg-slate-900')
+            whiteMobile.classList.toggle('bg-slate-300')
         }
 
         if (!body.classList.contains('bg-customizing-blue')) {
@@ -208,6 +284,7 @@ const initApp = () => {
         }
     } 
     blue.addEventListener('click', toggleBlueTheme)
+    blueMobile.addEventListener('click', toggleBlueTheme)
 
     const homePage = document.getElementById('homePage')
     const workPage = document.getElementById('workPage')
