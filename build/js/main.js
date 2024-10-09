@@ -1,6 +1,5 @@
 const initApp = () => {
     var year = document.getElementById('year');
-    
     year.innerHTML = new Date().getFullYear();
 
     const hamburgerBtn = document.getElementById('hamburger-button')
@@ -15,13 +14,16 @@ const initApp = () => {
     hamburgerBtn.addEventListener('click', toggleMenu)
     mobileMenu.addEventListener('click', toggleMenu)
 
+    /** 
+     * todo: edit themes so that they modify more than bg
+     */
+
     const white = document.getElementById('white')
     const pink = document.getElementById('pink')
     const green = document.getElementById('green')
     const blue = document.getElementById('blue')
 
     const body = document.getElementById('body')
-    const header = document.getElementById('header')
 
     const toggleWhiteTheme = () => {
         if (!white.classList.contains('bg-slate-900')) {
@@ -52,6 +54,19 @@ const initApp = () => {
         }
         if (body.classList.contains('bg-customizing-blue')) {
             body.classList.toggle('bg-customizing-blue')
+        }
+
+        if (!mobileMenu.classList.contains('bg-slate-50')) {
+            mobileMenu.classList.toggle('bg-slate-50')
+        }
+        if (mobileMenu.classList.contains('bg-customizing-pink')) {
+            mobileMenu.classList.toggle('bg-customizing-pink')
+        }
+        if (mobileMenu.classList.contains('bg-customizing-green')) {
+            mobileMenu.classList.toggle('bg-customizing-green')
+        }
+        if (mobileMenu.classList.contains('bg-customizing-blue')) {
+            mobileMenu.classList.toggle('bg-customizing-blue')
         }
     } 
     white.addEventListener('click', toggleWhiteTheme)
@@ -86,6 +101,19 @@ const initApp = () => {
         if (body.classList.contains('bg-customizing-blue')) {
             body.classList.toggle('bg-customizing-blue')
         }
+
+        if (!mobileMenu.classList.contains('bg-customizing-pink')) {
+            mobileMenu.classList.toggle('bg-customizing-pink')
+        }
+        if (mobileMenu.classList.contains('bg-slate-50')) {
+            mobileMenu.classList.toggle('bg-slate-50')
+        }
+        if (mobileMenu.classList.contains('bg-customizing-green')) {
+            mobileMenu.classList.toggle('bg-customizing-green')
+        }
+        if (mobileMenu.classList.contains('bg-customizing-blue')) {
+            mobileMenu.classList.toggle('bg-customizing-blue')
+        }
     } 
     pink.addEventListener('click', togglePinkTheme)
 
@@ -118,6 +146,19 @@ const initApp = () => {
         }
         if (body.classList.contains('bg-customizing-blue')) {
             body.classList.toggle('bg-customizing-blue')
+        }
+
+        if (!mobileMenu.classList.contains('bg-customizing-green')) {
+            mobileMenu.classList.toggle('bg-customizing-green')
+        }
+        if (mobileMenu.classList.contains('bg-customizing-pink')) {
+            mobileMenu.classList.toggle('bg-customizing-pink')
+        }
+        if (mobileMenu.classList.contains('bg-slate-50')) {
+            mobileMenu.classList.toggle('bg-slate-50')
+        }
+        if (mobileMenu.classList.contains('bg-customizing-blue')) {
+            mobileMenu.classList.toggle('bg-customizing-blue')
         }
     } 
     green.addEventListener('click', toggleGreenTheme)
@@ -152,13 +193,21 @@ const initApp = () => {
         if (body.classList.contains('bg-slate-50')) {
             body.classList.toggle('bg-slate-50')
         }
+
+        if (!mobileMenu.classList.contains('bg-customizing-blue')) {
+            mobileMenu.classList.toggle('bg-customizing-blue')
+        }
+        if (mobileMenu.classList.contains('bg-customizing-pink')) {
+            mobileMenu.classList.toggle('bg-customizing-pink')
+        }
+        if (mobileMenu.classList.contains('bg-customizing-green')) {
+            mobileMenu.classList.toggle('bg-customizing-green')
+        }
+        if (mobileMenu.classList.contains('bg-slate-50')) {
+            mobileMenu.classList.toggle('bg-slate-50')
+        }
     } 
     blue.addEventListener('click', toggleBlueTheme)
-
-    /** 
-     * todo: edit themes so that they modify more than bg
-     * todo: edit mobile menu to show correct bg color
-     */
 
     const homePage = document.getElementById('homePage')
     const workPage = document.getElementById('workPage')
