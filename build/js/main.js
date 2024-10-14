@@ -1,6 +1,26 @@
+
 const initApp = () => {
     var year = document.getElementById('year');
     year.innerHTML = new Date().getFullYear();
+
+    fetch('../../config.json')
+        .then(res => res.json())
+        .then(config => {
+            emailjs.init(config.EMAILJS_PUBLIC_KEY)
+
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault()
+                emailjs.sendForm(config.EMAILJS_SERVICE_ID, config.EMAILJS_TEMPLATE_ID, this)
+                    .then(() => {
+                        alert('Thank you for your message!')
+                    }, (error) => {
+                        alert('Error sending message. Please try again later.')
+                    }
+                )
+            })
+
+        })
+        .catch(error => console.log('Error fetching config:', error))
 
     const hamburgerBtn = document.getElementById('hamburger-button')
     const mobileMenu = document.getElementById('mobile-menu')

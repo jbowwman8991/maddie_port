@@ -14,7 +14,7 @@
         (function() {
             // https://dashboard.emailjs.com/admin/account
             emailjs.init({
-              publicKey: "qVNsBAPwUiD9stbE0",
+              publicKey: "",
             })
         })()
     </script>
@@ -23,7 +23,7 @@
             document.getElementById('contact-form').addEventListener('submit', function(event) {
                 event.preventDefault();
                 // these IDs from the previous steps
-                emailjs.sendForm('jake_gmail', 'maddie_portfolio', this)
+                emailjs.sendForm('', '', this)
                     .then(() => {
                         alert('Thank you for your message!')
                         var allInputs = document.querySelectorAll('input')
