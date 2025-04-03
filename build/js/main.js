@@ -1,26 +1,47 @@
+require('dotenv').config()
 
 const initApp = () => {
     var year = document.getElementById('year');
     year.innerHTML = new Date().getFullYear();
 
-    fetch('../../config.json')
-        .then(res => res.json())
-        .then(config => {
-            emailjs.init(config.EMAILJS_PUBLIC_KEY)
 
-            document.getElementById('contact-form').addEventListener('submit', function(event) {
-                event.preventDefault()
-                emailjs.sendForm(config.EMAILJS_SERVICE_ID, config.EMAILJS_TEMPLATE_ID, this)
-                    .then(() => {
-                        alert('Thank you for your message!')
-                    }, (error) => {
-                        alert('Error sending message. Please try again later.')
-                    }
-                )
-            })
+    emailjs.init(process.env.EMAILJS_PUBLIC_KEY)
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent form from refreshing page
 
-        })
-        .catch(error => console.log('Error fetching config:', error))
+        // Send form data using EmailJS
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form from refreshing page
+    
+            // Send form data using EmailJS
+            emailjs.sendForm(process.env.SERVICE_ID, process.env.TEMPLATE_ID, this)
+                .then(function() {
+                    alert('Message sent successfully!');
+                }, function(error) {
+                    alert('Failed to send message: ' + error.text);
+                });
+        });
+    });
+          
+
+    // fetch('../../config.json')
+    //     .then(res => res.json())
+    //     .then(config => {
+    //         emailjs.init(config.EMAILJS_PUBLIC_KEY)
+
+    //         document.getElementById('contact-form').addEventListener('submit', function(event) {
+    //             event.preventDefault()
+    //             emailjs.sendForm(config.EMAILJS_SERVICE_ID, config.EMAILJS_TEMPLATE_ID, this)
+    //                 .then(() => {
+    //                     alert('Thank you for your message!')
+    //                 }, (error) => {
+    //                     alert('Error sending message. Please try again later.')
+    //                 }
+    //             )
+    //         })
+
+    //     })
+    //     .catch(error => console.log('Error fetching config:', error))
 
     const hamburgerBtn = document.getElementById('hamburger-button')
     const mobileMenu = document.getElementById('mobile-menu')
